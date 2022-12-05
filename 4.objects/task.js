@@ -4,26 +4,39 @@ function Student(name, gender, age) {
   this.age = age;
 }
 Student.prototype.setSubject = function (subjectName) {
+  this.subjectName = subject;
 }
 
-Student.prototype.addMark = function (marks) {
-  if (this.marks === undefined) {
-    let mark = 0;
-  } else {
+Student.prototype.addMark = function (mark) {
 
-    mark[3, 4, 5] = arr // добавить вторую и последующие оценки в массив
+  if (this.mark === undefined) {
+    mark = 0;
+  }
+  else {
+    mark.push(1, 2, 3, 4, 5);
   }
 }
 
-Student.prototype.addMarks = function (mark1, mark2, mark3, ...marks) {
+
+Student.prototype.addMarks = function (...marks) {
+  if (this.marks === undefined) {
+    marks = 0;
+  }
+  else {
+    marks.push(...marks);
+  }
 }
+
+
 Student.prototype.getAverage = function () {
-  let sum = 0;
+
+  this.getAverage = Student.marks.reduse((all, mark) => all + mark) / Student.marks.length;
 
 }
 Student.prototype.exclude = function (reason) {
-  delete Student.setSubject;
-  delete Student.addMarks;
+  this.exclude = reason;
+  delete student2.subject;
+  delete student2.marks;
 }
 
 let student1 = new Student("Maria", "female", 25);
