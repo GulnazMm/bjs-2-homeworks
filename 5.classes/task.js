@@ -11,7 +11,7 @@ class PrintEditionItem {
         console.log(this.state * 1.5);
     }
 
-    set state(number) {
+    set _state(number) {
         if (number < 0) {
             this.state = 0;
         }
@@ -19,8 +19,8 @@ class PrintEditionItem {
             this.state = 100;
         } else this.state = number;
     }
-    get state() {
-        return this.state;
+    get _state() {
+        return this._state;
     }
 
 }
