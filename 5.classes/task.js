@@ -45,7 +45,7 @@ class NovelBook extends Book {
 }
 class FantasticBook extends Book {
     constructor(author,name, releaseDate, pagesCount) {
-        super(uthor,name, releaseDate, pagesCount);
+        super(author,name, releaseDate, pagesCount);
         this.type = "fantastic";
     }
 }
@@ -70,10 +70,11 @@ class Library {
         }
     }
     findBookBy(type, value) {
-        let searchBook = 0;
-        if (this.books.find(element => element.type === value)) {
-            searchBook = element;
+        let searchBook = (this.books.find(element => element[type] === value))
+        if (searchBook = element) {
+            return searchBook;
         } return null;
+    
     }
     giveBookByName(bookName) {
         let result;
