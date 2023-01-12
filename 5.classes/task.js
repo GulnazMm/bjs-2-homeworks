@@ -71,7 +71,7 @@ class Library {
     }
     findBookBy(type, value) {
         let searchBook = (this.books.find(element => element[type] === value))
-        if (searchBook = element) {
+        if  (searchBook) {
             return searchBook;
         } return null;
     
